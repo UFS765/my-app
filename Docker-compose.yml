@@ -1,0 +1,13 @@
+version: '3'
+services:
+  backend:
+    image: ufs765/backend-service:latest
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: ufs765/frontend-service:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
